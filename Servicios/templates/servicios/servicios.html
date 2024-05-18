@@ -1,0 +1,38 @@
+{% extends "TA_Inicio/base.html" %} {% load static %}
+
+<head>
+  {% block title %} TA_Servicios {% endblock title %}
+</head>
+
+{% block content %}
+
+<div class="contenedor_gral">
+  <h2 class="subtitulo">ALGUNOS SERVICIOS REALIZADOS.</h2>
+</div>
+
+<!-- Heading -->
+{% for servicio in servicios_tmp %}
+
+<section class="seccion_pagina">
+  <div class="contenedor_gral">
+    <h2 class="subtitulo">{{servicio.titulo}}</h2>
+    
+      <div class="seccion_recuadro">
+          <img class="seccion_recuadro_img" src="{{servicio.imagen.url}}" alt="Imagen_01">
+          <div class="seccion_recuadro_texto">
+              <h2 class="seccion_encabezado" >
+                  <span class="seccion_eslogan">{{servicio.id}}</span>
+                  <span class="seccion_titulo">{{servicio.nombre}}</span>
+              </h2>
+              <p class="seccion_descripcion" id="persona_funcion"> {{servicio.persona_funcion}}</p> 
+              <p class="seccion_descripcion">{{servicio.contenido}}</p>
+          </div>
+          
+      </div>
+      
+    </div>
+  </section>
+  {% endfor %}
+
+
+{% endblock content %}

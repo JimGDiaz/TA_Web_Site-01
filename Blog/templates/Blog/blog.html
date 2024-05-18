@@ -1,0 +1,51 @@
+{% extends "TA_Inicio/base.html" %}
+{% load static %}
+
+<head>
+{% block title %} TA_Blog {% endblock title %}
+</head>
+
+{% block content %}
+
+
+<div class="contenedor_gral">
+        <h2 class="subtitulo">TEMAS DE INTERÉS.</h2>
+      </div>
+      
+      {% for post in posts_tmp %}
+
+      <section class="seccion_pagina">
+        <div class="contenedor_gral">
+          <h2 class="subtitulo">{{post.titulo}}</h2>
+          
+            <div class="seccion_recuadro">
+                <img class="seccion_recuadro_img" src="{{post.imagen.url}}" alt="Imagen">
+                <div class="seccion_recuadro_texto">
+                    <h2 class="seccion_encabezado" >
+                        <span class="seccion_eslogan">{{post.id}}</span>
+                        <span class="seccion_titulo">AUTOR: {{post.autor}} </span>
+                    </h2>
+                    <p class="seccion_descripcion">{{post.contenido}}</p>
+                </div>
+                
+            </div>
+            
+          </div>
+        </section>
+        {% endfor %}
+
+       
+       <!-- CATEGORÍAS-->
+        <section>
+         <div style="width: 90%; background-color: rgba(144, 120, 240, 0.60); margin: auto; text-align: center; color:white">
+             <h4> Categorías: </h4>
+             {% for post in posts_tmp %}
+                 {% for categoria in post.categorias.all %}
+                     <a href="{% url 'categoria'  categoria.id %}" class="link" style="font-size: 1.5rem; color: aquamarine;">{{categoria.nombre}} </a> &nbsp &nbsp &nbsp 
+                 {%endfor%}
+
+             {% endfor %}
+
+        </section>
+
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends "TA_Inicio/base.html" %}
+{% load static %}
+
+<head>
+{% block title %} TA_Proyectos {% endblock title %}
+</head>
+
+{% block content %}
+
+<div class="contenedor_gral">
+    <h2 class="subtitulo"><div class="contenedor_gral">
+        <h2 class="subtitulo">ALGUNOS PROYECTOS REALIZADOS.</h2>
+      </div></h2>
+  </div>
+
+
+{% for prytos in prytos_tmp %}
+<section class="seccion_pagina">
+  <div class="contenedor_gral">
+    <h2 class="subtitulo">{{prytos.nombre}}</h2>
+    
+    <div class="seccion_recuadro">
+        
+          <img class="seccion_recuadro_img img-galeria-0" src="{{prytos.imagen_A.url}}" alt="Imagen_Antes"> 
+          <span id="antes"> Antes</span>  
+          <img class="seccion_recuadro_img img-galeria" src="{{prytos.imagen_D.url}}" alt="Imagen_Después"> 
+  
+
+          <div class="seccion_recuadro_texto">
+                <h2 class="seccion_encabezado" >
+                    <span class="seccion_eslogan">{{prytos.id}}</span>
+                    <span class="seccion_titulo">{{prytos.ubicacion}}</span>
+                </h2>
+                <p class="seccion_descripcion" id="persona_funcion"> {{prytos.persona_funcion}}</p> 
+                <p class="seccion_descripcion">{{prytos.descripcion}}</p>
+          </div>
+
+    </div>
+      
+  </div>
+</section>
+
+<section class="imagen-light">
+  <img src="{% static 'img_svg_ta/bx-x.svg' %}" alt="cerrar" class="close">
+  <img src="{% static 'img_jpg_ta/PA-Panini_Vista_Interior_00%.jpg' %}" alt="" class="agregar-imagen">
+</section>
+
+
+
+  {% endfor %}
+
+        <!-- Usos-->
+				<div class="contenedor_gral" style="padding: 0 45px;">
+                     <h4 class="subtitulo" style="font-size: 1.2rem;" >Género de Edificios Involucrados: </h4>
+                     {% for prytos in prytos_tmp %}
+                    	<spam style="font-size: 1rem; color: rgb(184, 128, 240); font-weight: 500;">{{prytos.usos}} </spam> &nbsp &nbsp &nbsp 
+                     {% endfor %}
+                </div>
+                {% comment %} <div style="background-color: purple; margin: auto; text-align: center; color:white">
+                    <h4> Género de Edificios: </h4>
+                    {% for prytos in prytos_tmp %}
+                       <spam class="link" style="font-size: 1.5rem;">{{prytos.usos}} </spam> &nbsp &nbsp &nbsp 
+                    {% endfor %}
+               </div>		 {% endcomment %}	
+
+{% endblock content %}

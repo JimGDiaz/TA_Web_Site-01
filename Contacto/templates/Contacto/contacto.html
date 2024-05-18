@@ -1,0 +1,29 @@
+{% extends "TA_Inicio/base.html" %}
+{% load static %}
+
+<head>
+{% block title %} TA_Contacto {% endblock title %}
+</head>
+
+{% block content %}
+<br>
+<div class="contenedor_gral">
+    <h2 class="subtitulo">Contactanos por Email, Teléfono o What's App.</h2>
+  
+    <div class="contacto_registro">
+        
+        {% if "valido" in request.GET %}
+        <p>Información enviada correctamente, ¡gracias! </p>
+        {% endif %}
+        
+        <form acttion="" method="POST">
+            {% csrf_token %}
+            <caption>AGRADECEMOS TUS COMENTARIOS.</caption>
+            <table> {{mi_formulario.as_table}} </table>
+            <input type="submit" value="Enviar" class=" btn btn-primary" >
+        </form>
+    </div>
+
+</div> 
+<br>     
+{% endblock content %}

@@ -1,0 +1,29 @@
+
+{% extends "TA_Inicio/base.html" %}
+{% load static %}
+
+<head>
+{% block title %} TA_Registro {% endblock title %}
+</head>
+
+{% block content %}
+
+
+<div class="contenedor_gral" id="TA_contenedor_gral">
+    <h2 class="subtitulo">Registro de Nuevos Usuarios.</h2>
+
+		<div class="contacto_registro">
+			<h3 class="registro_titulo">AUTENTICACIÓN</h3>
+			<form method="post" action="">
+				{% csrf_token %}
+				{{form_tmp}}
+				<button type="submit" class="btn btn-success"> Registrate </button>
+			</form>
+		</div>
+	
+</div> 
+
+
+{% endblock content %}
+
+{% comment %} style="border: 0.1px solid white; border-radios: 5px; {% endcomment %}

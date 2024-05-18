@@ -1,0 +1,127 @@
+
+{% extends "TA_Inicio/base.html" %}
+{% load static %}
+
+<head>
+{% block title %}-Total Architecture{% endblock title %}
+</head>
+<!-- *************** INICIA BLOQUE HOME *************** -->
+{% block content %}
+
+<header class="header" id="inicio">
+    <div class="contenedor_principal head">
+      <h1 class="titulo">El Placer de Construir tus Sueños</h1>
+      <img class="logo_TA" src="{% static 'img_jpg_ta/TA_Logo.png' %}" alt="logo" />
+      <h2 class="company">Total Architecture</h2>
+      <p class="eslogan">
+        "Integral Design and Engineering with Vanguard's Technology"
+      </p>
+    </div>
+  </header>
+
+<div class="contenedor_gral">
+  <h2 class="subtitulo">Servicios: Estudios y Diseño</h2>
+  <div class="tarjeta_grupo">
+    <div class="tarjeta">
+      <img src="{% static 'imgs_plantilla_base/Estudios_Urbanos-00.jpg' %}" class="tarjeta_img_sup" alt="Imagen-01" >
+      <div class="tarjeta_cuerpo">
+        <h5 class="tarjeta_titulo">ESTUDIOS URBANOS</h5>
+        <p class="tarjeta_texto">Realización de diversos Estudios Urbanos, tales como: Microlocalización de Centros Comerciales e Industriales; Estudios de Población, Movilidad y Crecimiento; Modelos Gravitacionales de Influencia; para el Consumo de un determinado Producto, o de requerimiento de un Servicio o Infraestructura.</p>
+        <p class="tarjeta_texto"><small class="texto_cuerpo_secundario">ENTREGA: Documento Ejecutivo con tablas y gráficos estadísticos en formato pdf.</small></p>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <img src="{% static 'imgs_plantilla_base/Estudios_Factibilidad-00.jpg' %}" class="tarjeta_img_sup" alt="Imagen-02" >
+      <div class="tarjeta_cuerpo">
+        <h5 class="tarjeta_titulo">ESTUDIOS DE FACTIBILIDAD</h5>
+        <p class="tarjeta_texto">Elaboración de Estudios de Factibilidad enfocados al Desarrollo de Fraccionanientos  Habitacionales y/o Proyectos Comerciales con el propósito de determinar tanto la viabilidad como la rentabilidad de los mismos.</p>
+        <p class="tarjeta_texto"><small class="texto_cuerpo_secundario">ENTREGA: Documento Ejecutivo con tablas. de área-valor de acuerdo al uso de suelo y fujo de efectivo en formato pdf.</small></p>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <img src="{% static 'imgs_plantilla_base/Diseño_Arq-00.jpg' %}" class="tarjeta_img_sup" alt="Imagen-03" >
+      <div class="tarjeta_cuerpo">
+        <h5 class="tarjeta_titulo">ARQUITECTURA</h5>
+        <p class="tarjeta_texto">Diseño de Proyectos Arquitectónicos con base a una Metodología, consistente en: Análisis del Sitio; Terreno e Infraestructura; Estudios Técnicos, Económicos y de Necesidades; Anteproyecto, con Análisis de Formas, Programa y Partido Arquitectónico, Diagramas de Funcionamiento y Croquis de Diseño.</p>
+        <p class="tarjeta_texto"><small class="texto_cuerpo_secundario">ENTREGA: Documento Ejecutivo con tablas, croquis, Programa-Partido Arquitectónico, Croquis y Planos de Diseño.</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Heading -->
+<section class="seccion_pagina">
+  <div class="contenedor_gral">
+    <h2 class="subtitulo">Nuestro Compromiso</h2>
+     
+      <div class="seccion_recuadro">
+
+        <img class="seccion_recuadro_img" src="{% static 'img_jpg_ta/UVM_Puebla_Restaurant_Después.jpg' %}" alt="Ckínica Ags.">
+        
+        <div class="seccion_recuadro_texto">
+            <h2 class="seccion_encabezado" >
+                <span class="seccion_eslogan">Nuestra</span>
+                <span class="seccion_titulo">MISIÓN</span>
+            </h2>
+            <p class="seccion_descripcion">Realizar Proyectos Ejecutivos con la eficiente y óptima Planeación tanto en la fase de Proyecto como en la de Ejecución de la Obra: Alcance, Tiempo, Costo, Calidad, Uso eficiente de los Recursos Humanos, Comunicación, Riesgo, Abastecimiento e Integración.</p>
+        </div>
+        <div class="seccion_recuadro_texto">
+          <h2 class="seccion_encabezado" >
+              <span class="seccion_eslogan">Nuestra</span>
+              <span class="seccion_titulo">VISIÓN</span>
+          </h2>
+          <p class="seccion_descripcion">Desarrollar Proyectos Sustentables, que incluyan: los principios de la Arquitectura Bioclimática; la Arquitectura Integral, espacios modulares reciclables; el uso Eficiente de Energía así como la utilización de materiales locales de menor riesgo de contaminación.</p>
+      </div>
+      </div>
+
+  </div>
+</section>
+
+  <div class="contenedor_gral">
+    <h2 class="subtitulo">Servicios: Ingenierías</h2>
+    <div class="tarjeta_grupo">
+      <div class="tarjeta">
+        <img src="{% static 'imgs_plantilla_base/Estudios_Topográficos-00.jpg' %}" class="tarjeta_img_sup" alt="Imagen-01" >
+        <div class="tarjeta_cuerpo">
+          <h5 class="tarjeta_titulo">TOPOGRAFÍA</h5>
+          <p class="tarjeta_texto">Proyectos Topográficos que incluyen: Levantamiento del Terreno (Planimetría y/o Altimetría); Cálculo de las Poligonales Real y Base; Planos Ejecutivos de Plantas Topográficas y Secciones Transversales requeridas; con Tablas de Áreas, Distancias, Ángulos, Rumbos y Coordenadas UTM.</p>
+          <p class="tarjeta_texto"><small class="texto_cuerpo_secundario">ENTREGA: Documento Memoria de Cálculo con Tablas y Plano(s) Topográficos.</small></p>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="{% static 'imgs_plantilla_base/Diseño_Est_Concreto-00.jpg' %}" class="tarjeta_img_sup" alt="Imagen-02" >
+        <div class="tarjeta_cuerpo">
+          <h5 class="tarjeta_titulo">Diseño y Cálculo Estructural</h5>
+          <p class="tarjeta_texto">Ánalisis y Diseño de la Estructura de Concreto y/o Acero de acuerdo a las Normas Técnicas Complementarias de la Ciudad de México: Elaboración de Planos Estructurales, Cimentación, Entrepiso, Detalles estructurales de zapatas, dados, contra-trabes, columnas, trabes, entre otros.</p>
+          <p class="tarjeta_texto"><small class="texto_cuerpo_secundario">ENTREGA: Documento Memoria de Cálculo con Tablas y Plano(s) Estructurales de Concreto y/o Acero.</small></p>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <img src="{% static 'imgs_plantilla_base/Inst_Eléctricas-00.jpg' %}" class="tarjeta_img_sup" alt="Imagen-03" >
+        <div class="tarjeta_cuerpo">
+          <h5 class="tarjeta_titulo">Instalaciones</h5>
+          <p class="tarjeta_texto">Diseño y Cálculo de Instalaciones Hidráulicas, Sanitarías, Eléctricas de baja y media tensión, Telefonía e Internet y Aire Acondicionado de acuerdo a las Normas Técnicas Complementarias de la Ciudad de México: Elaboración de Planos con Plantas de Distibución, Elevaciones, Cortes y Detalles cuando se requiera. </p>
+          <p class="tarjeta_texto"><small class="texto_cuerpo_secundario">ENTREGA: Documentos Memorias de Cálculo con Tablas y Plano(s) de las diversas Instalaciones.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Message -->
+    <section class="seccion_pagina">
+      <div class="contenedor_gral">
+       
+          <div class="seccion_recuadro">
+            <div class="seccion_recuadro_texto">
+              <h2 class="seccion_encabezado">
+                <span class="seccion_titulo">Compromiso Profesional Total</span>
+                <span class="seccion_eslogan">Satisfacción Garantizada</span>
+              </h2>
+              <p class="seccion_descripcion">Con más de 40 años de experiencia que nos respaldan en los diversos trabajos efectuados de variados géneros, desde la elaboración de Proyectos de Vivienda, Comercio e Industria, hasta la Construcción de los mismos. Tenemos los conocimientos técnicos y herramientas necesarios para llevar a cabo de forma óptima y profesional su proyecto.</p>
+            </div>
+          </div>
+       
+      </div>
+    </section>
+
+    {% endblock content %}

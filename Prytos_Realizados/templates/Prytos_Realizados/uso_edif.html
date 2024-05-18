@@ -1,0 +1,42 @@
+{% extends "TA_Inicio/base.html" %}
+{% load static %}
+
+<head>
+{% block title %} TA_Blog {% endblock title %}
+</head>
+
+{% block content %}
+
+        <h1>BLOG html</h1>
+        <section class="page-section">
+        {% for pf in prytos_f %}
+
+        <div class="contenedor">
+                <div class="intro">
+                        <h2>{{pf.nombre}}</h2>
+                        <p>{{pf.ubicacion}}</p>
+                        <p>{{pf.descripcion}}</p>   
+                </div>
+                <div style="text-alig: left; color: white;">
+                  <spam> Autor: {{ post.autor}} </spam>
+                </div>  
+                <p><img src="{{pf.imagen.url}}" /></p>
+        </div>
+        {% endfor %}
+
+        </section>
+
+        <!-- CATEGORÍAS-->
+        <section>
+         <div style="width: 90%; background-color: purple; margin: auto; text-align: center; color:white">
+             <h4> Categorías: </h4>
+             {% for post in posts_tmp %}
+                 {% for categoria in post.categorias.all %}
+                     <a href="{% url 'categoria'  categoria.id %}" class="link" style="font-size: 1.5rem;">{{categoria.nombre}} </a> &nbsp &nbsp &nbsp 
+                 {%endfor%}
+
+             {% endfor %}
+
+     </section>
+
+{% endblock content %}

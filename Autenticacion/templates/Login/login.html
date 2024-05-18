@@ -1,0 +1,35 @@
+
+
+    {% extends "TA_Inicio/base.html" %}
+    {% load static %}
+    
+    <head>
+        {% block title %} TA_Login {% endblock title %}
+    </head>
+
+    {% block content %}
+    
+    
+<div class="contenedor_gral" id="">
+    <h2 class="subtitulo">Usuarios Registrados.</h2>
+
+    <form method="POST" action="" class="container ta_login">  
+           {% csrf_token %}
+        <div>
+                <div class="login_mensajes">    
+                    {% if messages %}
+                    {% for mensaje in messages  %}
+                        <em class="alert alert-{{mensaje}}">{{mensaje}}</em>
+                    {% endfor %}
+                    {% endif %}
+                </div>   
+                    <br>
+                    {{form}} 
+                <button type= "submit" class="btn btn-success"> Login </button>
+
+        </div>
+        
+    </form>
+</div>
+    {% endblock content %}
+

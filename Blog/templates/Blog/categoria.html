@@ -1,0 +1,43 @@
+       
+   {% extends "TA_Inicio/base.html" %}
+   {% load static %}
+   
+    <head>
+        {% block title %} TA_Categoria {% endblock title %}
+    </head>
+
+    {% block content %}
+
+    {% for pf in post_filtro %}
+
+    <section class="seccion_pagina">
+      <div class="contenedor_gral">
+        <h2 class="subtitulo">{{pf.titulo}}</h2>
+        
+          <div class="seccion_recuadro">
+              <img class="seccion_recuadro_img" src="{{pf.imagen.url}}" alt="Imagen_01">
+              <div class="seccion_recuadro_texto">
+                  <h2 class="seccion_encabezado" >
+                      <span class="seccion_eslogan">{{pf.id}}</span>
+                      <span class="seccion_titulo">Autor: {{pf.autor}}</span>
+                  </h2>
+                  <p class="seccion_descripcion">{{pf.contenido}}</p>
+              </div>
+              
+          </div>
+          
+        </div>
+      </section>
+      {% endfor %}
+
+        <section>
+            <div style="width: 75%; background-color: rgba(144, 120, 240, 0.60); margin: auto; text-align: center; color:white">
+                <h5> Categoría: </h5>
+                {% for post in post_filtro %}
+                    {%for categoria in post.categorias.all%}
+                        {{categoria.nombre}} &nbsp &nbsp &nbsp
+                    {%endfor%}
+                {% endfor %}
+
+        </section>
+    {% endblock content %}

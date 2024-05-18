@@ -1,0 +1,541 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'); */
+
+/* ************ DIRECTRICES GENERALES ************ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'TA-Avantg_Med';
+    src: url("../fonts_ta/AVGARDM.TTF");
+}
+
+@font-face {
+    font-family: 'TA-Micro_Med';
+    src: url("../fonts_ta/m025094d.ttf");
+}
+
+@font-face {
+    font-family: 'TA-Swiss_Blk';
+    src: url("../fonts_ta/swissko.ttf");
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/* ************ ETIQUETA ENCABEZADO: GRUPO ENCABEZADO Y MENÚ DE NAVEGACIÓN ************ */
+header{
+    height: 99vh;
+    background-image: linear-gradient(to top, rgba(68, 66, 187, 0.45) 0%, rgba(233, 194, 251, 0.45) 100%), url(../img_jpg_ta/TEVE-Acapulco_01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* *** CONTENEDOR GRAL. "GRUPOS": ENCABEZADO, SERVICIOS, GALERÍA, EXPERTOS Y PÍE *** */
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+/* ************ ENCABEZADO: TÍTULO, LOGO TA, COMPANY Y ESLOGAN ************ */
+.head{
+    /*text-align: center;*/
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: ivory;
+    text-shadow: 3px 3px 3px black;
+    /*border: 3PX solid yellowgreen;*/
+}
+
+.titulo{
+    font-family: 'TA-Micro_Med', 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 51px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.logo_TA{ 
+    width: 240px;
+    height: 150px; 
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.logo_TA:hover{
+    transform: rotate(360deg);
+}
+
+.company{
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 30px; 
+}
+
+.eslogan{
+    font-weight: 300;
+    font-size: 21px;
+}
+
+/* ************ MENÚ DE NAVEGACIÓN E ICONO ************ */
+.hamburger{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 0.3px solid blue;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 21vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    transition: transform 0.3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.spread{
+    /* CLAVE IMPORTANTE PARA EL MÉNU */
+    z-index: 5;
+    transform: translate(0);
+}
+
+.menu-navegacion a{
+    position: relative;
+    z-index: 100;
+    color: #fff;
+    text-shadow: 3px 3px 3px rgba(255, 0, 255, 0.5);;
+    text-decoration: none;
+    border-bottom: 3px double cyan;
+}
+
+/* ************ CONTENEDOR SERVICIOS ************ */
+.subtitulo{
+    /*font-family: 'TA-Avantg_Med';*/
+    text-align: center;
+    font-weight: 300;
+    color: rgb(190, 15, 190);
+    text-shadow: 1.8px 1.8px 3px rgba(95, 0, 95, 0.5);
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-servicio img{
+width: 40%;
+transition: all 2s ease-in-out;
+}
+
+.contenedor-servicio img:hover{
+    cursor: pointer;
+    transform: rotateY(360deg);
+   /*  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); */
+}
+
+
+.checklist-servicio{
+    width: 45%;
+}
+
+.service{
+    margin-bottom: 20px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: #9f8ad8;
+}
+
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+/* ************ CONTENEDOR GALERÍA ************ */
+.gallery{
+    background-image: linear-gradient(to top, rgba(75, 45, 180, 0.27) 0%, rgba(150, 75, 226, 0.27) 100%);
+    
+}
+
+.contenedor-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /*border: 3px solid green;*/
+}
+
+/* ************ CONTENEDOR: IMÁGEN Y NOMBRE; INICIA AJUSTE ************ */
+.figure-galeria{
+    /*border: 3px solid red;*/
+    width: 30%;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(180, 104, 255, 0.2), rgba(120, 104, 255, 0.2));
+    box-shadow: 3px 3px 7px white;
+    /* background-color: rgba(0, 255, 255, 0.12); */
+    border: 0.9px solid rgba(0, 0, 255, 0.6);
+    border-radius: 6px;
+    margin: 6px;
+}
+
+.img-galeria-0{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    z-index: -1;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 75%;
+    margin-bottom: 5px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    border: 1px solid blue;
+}
+
+figcaption{
+    color: indigo;
+    text-align: center;
+    /* border: 3px double navy; */
+}
+
+.img-galeria{
+    object-fit: cover;
+    display: block;
+    /*width: 30vw;
+    height: 39vw;*/
+    width: 100%;
+    height: 75%;
+    margin-bottom: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: trasform .3s .2s;
+}
+
+.show{
+    transform: translate(0);
+}
+
+
+.showImage{
+    transform: scale(1.2);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* ************ CONTENEDOR EXPERTOS EN: ************ */
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    transition: all 2s ease-in-out;
+}
+
+.cont-expert img:hover{
+    cursor: pointer;
+    transform: rotateY(360deg);
+}
+
+.n-expert{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+
+/* ************ CONTENEDOR FOOTER ************ */
+footer{
+    background: #9f8ad0;
+    padding-bottom: 0.1px; /* Se puso por el colapsado de margenes */
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+/* ************ CONTENEDOR IZQUIERDO LOGO, COMPANY, ESLOGAN ************ */
+.contact-us{
+    width: 39%;
+    color: #fff;
+}
+
+.contact-us .logo_TA{
+    display: block;
+    width: 45%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+.contact-us .logo_TA:hover{
+    transform: rotate(360deg);
+}
+
+
+
+
+.brand{
+    font-weight: 500;
+    font-size: 42px;
+    text-align: center;
+    text-shadow: 3px 3px 3px navy;
+}
+
+.brand+p{
+    font-weight: 300;
+    text-align: center;
+}
+
+/* ************ CONTENEDOR CENTRAL TÉLEFONOS ************ */
+.phones-content{
+    align-self: flex-end;
+    width: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 1.5px;
+}
+
+.phones-content P{
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 3px 3px 3px navy;
+
+}
+
+/* ************ CONTENEDOR DERECHO REDES SOCIALES ************ */
+.social-media{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon:hover{
+    background: #fff;
+    color: #764ba2;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+/* */
+@media screen and (min-width: 501px) and (max-width:920px){
+    .hamburger{
+        top: 24px;
+        right: 18px;
+    }
+    .menu-navegacion{
+        width: 50vw;
+    }
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor-servicio img{
+        width: 80%; /* Para que se aplique el wrap */
+        margin-bottom: 40px;
+    }
+    .checklist-servicio{
+        width: 80%;
+    }
+    .service{
+        margin-bottom: 30px;
+    }
+
+    .agregar-imagen{
+        width: 80%;
+    }
+    
+/* ************ INICIA AJUSTE ************ */
+    .contenedor-galeria{
+        margin-right: 12px;
+    }
+
+    .figure-galeria{
+        width: 45%;
+    }
+
+   /* .img-galeria{
+        width: 45%;
+    }*/
+
+
+    .cont-expert{
+        width: 80%;
+    }
+
+    .footer-content{
+        justify-content: center;
+    }
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .social-media i{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .menu-navegacion{
+        width:65vw;
+    }
+    .hamburger{
+        top: 24px;
+        right: 3px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .subtitulo{
+        font-size: 30px;
+    }
+    .agregar-imagen{
+        width: 95%;
+    }
+    /* ************ INICIA AJUSTE ************ */
+    .contenedor-galeria{
+        margin-right: 21px;
+    }
+
+    .figure-galeria{
+        width: 95%;
+    }
+
+    /*.img-galeria{
+        width: 95%;
+    }*/
+
+    .social-media{
+    width: 100%;
+    }
+    .contact-us{
+        width: 90%;
+    }
+}
+
+/* SE ELABORÓ CON JS
+header:hover .menu-navegacion{
+    transform: translate(110%);
+} */
